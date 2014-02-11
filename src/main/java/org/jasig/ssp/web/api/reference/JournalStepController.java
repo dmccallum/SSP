@@ -158,6 +158,14 @@ public class JournalStepController
 		final JournalStepDetail journalStepDetail = journalStepDetailService
 				.get(journalAssociation.getId());
 		final JournalStep journalStep = service.get(id);
+		
+		for(JournalStepJournalStepDetail detail:journalStep.getJournalStepJournalStepDetails())
+		{
+			if(detail.getJournalStepDetail().getId().equals(journalStepDetail.getId())){
+				service.removeJournalStepDetailFromJournalStep(journalStepDetail, journalStep);
+				break;
+			}
+		}
  
 		service.addJournalStepDetailToJournalStep(journalStepDetail,
 				journalStep,journalAssociation.getSortOrder());
