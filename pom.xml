@@ -39,7 +39,7 @@
 		<connection>scm:git:git://github.com/dmccallum/SSP.git</connection>
 		<developerConnection>scm:git:git@github.com:dmccallum/SSP.git</developerConnection>
 		<url>https://github.com/dmccallum/SSP</url>
-		<tag>HEAD</tag>
+		<tag>master-release-wip</tag>
 	</scm>
 
 	<repositories>
